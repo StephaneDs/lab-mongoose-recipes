@@ -46,12 +46,11 @@ async function seedDatabase() {
 
     const createAllRecipes = await Recipe.insertMany(data)
     const createRecipeOne = await Recipe.create(RecipeOne)
-    ////console log created recipe "chicken curry"
     console.log(createRecipeOne.title)
     //////////Iteration 4 - Update recipe
     await Recipe.findOneAndUpdate(
-      { title: "Rigatoni alla Genovese" },
-      { duration: 100 }
+      { title: "Asian Glazed Chicken Thighs" },
+      { duration: 40 }
     )
     //////Iteration 5 - Remove a recipe
     await Recipe.deleteOne({ title: "Carrot Cake" })
